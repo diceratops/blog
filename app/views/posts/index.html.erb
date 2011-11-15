@@ -1,0 +1,20 @@
+<div class="posts">
+<p class="right"><%= link_to 'New Post', new_post_path if admin_signed_in? %></p>
+
+<% @posts.each do |post| %>
+<div class="post">
+    <h3><%= post.title %></h3>
+		
+    <p><%= post.body.truncate(300) %> <%= link_to 'Read More', post %></p>
+		<p class="date"><%= post.created_at %></p>
+    <p><%= link_to 'Edit', edit_post_path(post) if admin_signed_in? %> |
+		<%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
+
+</div>
+<% end %>
+</div>
+
+
+<br />
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, :id => key %>
+<% end %>
+
+  <div id="top">
+		<div id="topCenter">
+			<div class="title">
+  	 		<h1>Sarah Riggs</h1>
+				<p>Information Scientist</p>
+			</div>
+			<div class="icons">
+				<p>test | test | test</p>
+			</div>
+
+ 		 </div>
+	<div>
+
+
+
+  <div id="middle">
+		<div id="middleCenter">
+			<div id="slider">
+				<p>This is where my portfolio jquery slider goes</p>
+				<p>TODO: make the newest post go to the top</p>
+				<p>TODO: Format the posts, allow form to accept code</p>
+				<p>TODO: Only link to the top 3 most recent posts on the bottom</p>
+				<p>TODO: make it not brake when you both show the most recent posts on the bottom portion</p>
+			</div>
+	   <%= yield %>
+ 	 	</div>
+	<div>
+
+  <div id="bottom">
+		<div id="bottomCenter">
+
+ 		  <div id="bottomLeft">
+				<p>Bacon ipsum dolor sit amet culpa short ribs officia shankle, dolor proident laboris jerky deserunt consectetur. Magna flank consequat, exercitation sausage labore ground round officia sint meatball spare ribs do. Bacon tri-tip sausage in ut.</p>
+				<p> Id officia jerky, non salami elit laborum duis beef bacon mollit nulla cillum capicola. Tail cow nulla, occaecat pig in commodo prosciutto sunt ball tip jerky ea. Exercitation labore tempor, non laborum enim short loin. Pork dolor nulla dolore.</p>
+			</div>
+
+			<div id="bottomMiddle">
+				<% @posts.each do |post| %>
+				<p><%= post.body.truncate(200) %><%= link_to 'Read More', post %></p>
+				<% end %>
+			</div>
+
+			<div id="bottomRight">
+				<p>@Diceratops</p>
+				<p>Twitter</p>
+				<p>LinkedIn</p>
+				<p>GitHub</p>
+				<p>Good Reads</p>
+				<p>Rdio</p>
+			</div>
+
+	  </div>
+	</div>
+
+</body>
+</html>
