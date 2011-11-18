@@ -20,21 +20,14 @@
 			<div class="icons">
 				<p>test | test | test</p>
 			</div>
+				<p class="right"><%= link_to 'New Post', new_post_path if admin_signed_in? %></p>
 
  		 </div>
 	<div>
 
 
-
   <div id="middle">
 		<div id="middleCenter">
-			<div id="slider">
-				<p>This is where my portfolio jquery slider goes</p>
-				<p>TODO: make the newest post go to the top</p>
-				<p>TODO: Format the posts, allow form to accept code</p>
-				<p>TODO: Only link to the top 3 most recent posts on the bottom</p>
-				<p>TODO: make it not brake when you both show the most recent posts on the bottom portion</p>
-			</div>
 	   <%= yield %>
  	 	</div>
 	<div>
@@ -48,7 +41,7 @@
 			</div>
 
 			<div id="bottomMiddle">
-				<% @posts.each do |post| %>
+				<% @recent_posts.each do |post| %>
 				<p><%= post.body.truncate(200) %><%= link_to 'Read More', post %></p>
 				<% end %>
 			</div>

@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="posts">
-<p>
-  <h3><%= @post.title %></h3>
-</p>
 
-<p>
-  <%= @post.body %>
-</p>
+  <h3><%= @post.title %></h3>
+		<p class="date"><%= @post.created_at %></p>
+
+
+		<%= raw RedCloth.new(@post.body).to_html %>
+
+
 </div>
 
 <%= link_to 'Edit', edit_post_path(@post) if admin_signed_in?  %> |
