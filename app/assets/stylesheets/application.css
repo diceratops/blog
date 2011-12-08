@@ -18,9 +18,16 @@ h1 {
 	font-size: 30px;
 }
 
+h1 a {
+	color: #cc9900;
+}
+
+h1 a:visited {
+	color: #cc9900;
+}
 
 #top {
-	background-color: #000000;
+	background-color: #000;
 	color: #ffffff;
 	height: 120px;
 }
@@ -38,8 +45,8 @@ h1 {
 	float:left;
 }
 
-.title p {
-	color:#cc9900;
+.title {
+	color:#fff;
 	padding-left:12px;
 }
 
@@ -98,14 +105,21 @@ h1 {
 	width:300px;
 	float:left;
 	padding: 10px;
+	background: url(circleOrange.png);
+	background-repeat: no-repeat;
 }
 
 a {
-	color: #ff6600;
+	color: #cc9900;
+	text-decoration:none;
 }
 
 a:visited {
-	color: #ff9900;
+	color: #cc5500;
+}
+
+a:hover {
+	color: #303030;
 }
 
 hr {
@@ -120,13 +134,46 @@ hr {
 	font-size: 12px;
 }
 
+.dateComment {
+	color:#a1a1a1;
+	text-align: left;
+	font-size: 12px;
+}
+
 .right {
 	text-align: right;
 }
 
-.posts {	
+.posts h3 {
+	color: #000;
 }
 
-.post {
-	color:#585858;
+.body {
+	color: #585858;
 }
+
+.name {
+	font-weight: bold;
+}
+
+.comments {
+	background-color: #f0f0f0;
+	padding: 10px;
+}
+
+.nameImage {
+	float: left;
+	padding: 5px;
+	width: 100px;
+}
+
+.readmore {
+	padding-left: 800px;
+	line-height: .1
+}
+
+.notice {
+	color: #e0e0e0;
+}
+
+

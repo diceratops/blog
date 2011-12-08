@@ -1,14 +1,57 @@
-<p id="notice"><%= notice %></p>
 <div class="posts">
 
   <h3><%= @post.title %></h3>
 		<p class="date"><%= @post.created_at %></p>
 
 
-		<%= raw RedCloth.new(@post.body).to_html %>
+		<div class="body"><%= raw RedCloth.new(@post.body).to_html %></div>
 
 
 </div>
 
-<%= link_to 'Edit', edit_post_path(@post) if admin_signed_in?  %> |
+<div class="comments">
+	<% @post.comments.each do |comment| %>
+		<div class="nameImage">[PICTURE]</div>
+		<p class="name"><%= comment.name %> says . . . </p>
+		<p class="body"><%= comment.body %></p>
+		<p class="dateComment"><%= comment.created_at %></p>
+	<% end %>
+</div>
+
+<div class="form">
+	<%= form_for(@post.comments.new) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+	<%= f.hidden_field :post_id %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+
+<%= link_to 'Edit | ', edit_post_path(@post) if admin_signed_in?  %>
 <%= link_to 'Back', posts_path %>

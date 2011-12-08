@@ -12,7 +12,7 @@
   <div id="top">
 		<div id="topCenter">
 			<div class="title">
-  	 		<h1>Sarah Riggs</h1>
+  	 		<h1><a href="/">Sarah Riggs</a></h1>
 				<p>Information Scientist</p>
 			</div>
 			<div class="icons">
@@ -37,23 +37,26 @@
 		<div id="bottomCenter">
 
  		  <div id="bottomLeft">
-				<p>Bacon ipsum dolor sit amet culpa short ribs officia shankle, dolor proident laboris jerky deserunt consectetur. Magna flank consequat, exercitation sausage labore ground round officia sint meatball spare ribs do. Bacon tri-tip sausage in ut.</p>
-				<p> Id officia jerky, non salami elit laborum duis beef bacon mollit nulla cillum capicola. Tail cow nulla, occaecat pig in commodo prosciutto sunt ball tip jerky ea. Exercitation labore tempor, non laborum enim short loin. Pork dolor nulla dolore.</p>
+				<p>Sarah Riggs, is an Information Scientists with a passion for making the user happy.</p>
+				<p>She's not afraid to get her hands dirty, and not just because she used to be an Archaeologist. She loves jumping into to new projects especially if it involves playing with code and learning something off the wall.</p>
+				<p>Sarah can often be found doodling, writing, and spending time outside.</p>
+				<p>This is another paragraph</p>
+				<p>This is another still</p>
 			</div>
 
 			<div id="bottomMiddle">
 				<% @recent_posts.each do |post| %>
-				<p><%= raw RedCloth.new(post.body.truncate(200)).to_html %><%= link_to 'Read More', post %></p>
+				<p><%= raw RedCloth.new(post.body.truncate(200)).to_html %><%= link_to ' Read More', post %></p>
 				<% end %>
 			</div>
 
 			<div id="bottomRight">
 				<p>@Diceratops</p>
-				<p>Twitter</p>
-				<p>LinkedIn</p>
-				<p>GitHub</p>
-				<p>Good Reads</p>
-				<p>Rdio</p>
+				<p><a href="http://www.twitter.com/!/diceratops">Twitter</a></p>
+				<p><a href="">LinkedIn</a></p>
+				<p><a href="http://www.github.com/diceratops">GitHub</a></p>
+				<p><a href="">Good Reads</a></p>
+				<p><a href="">Rdio</a></p>
 			</div>
 
 	  </div>

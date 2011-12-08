@@ -1,15 +1,11 @@
-<div id="slider">
-		<p>This is where my portfolio jquery slider goes</p>
-		<p>TODO: Format the posts, allow form to accept code</p>
-</div>
-
 <div class="posts">
 
 
 <% @posts.each do |post| %>
 <div class="post">
     <h3><%= link_to post.title, post %></h3>		
-    <p><%= raw RedCloth.new(post.body.truncate(300)).to_html %> <%= link_to ' Read More', post if post.body.length > 300 %></p>
+    <div class="body"><%= raw RedCloth.new(post.body.truncate(300)).to_html %></div>
+		<p class="readmore"><%= link_to ' Read More', post if post.body.length > 300 %></p>
 		<p class="date"><%= post.created_at %></p>
     <p><%= link_to 'Edit | ', edit_post_path(post) if admin_signed_in? %>
 		<%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
