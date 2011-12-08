@@ -28,4 +28,3 @@ group :test do
 end
 
 gem 'devise'
-gem 'therubyracer-heroku'
