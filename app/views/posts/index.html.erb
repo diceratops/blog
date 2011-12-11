@@ -9,8 +9,9 @@
 	
   <p class="readmore"><%= link_to ' Read More', post if post.body.length > 300 %></p>
 	<p class="date"><%= post.created_at %></p>
-  <p><%= link_to 'Edit | ', edit_post_path(post) if admin_signed_in? %>
-	<%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
+	<div id="appbar">
+  <%= link_to 'Edit Post | ', edit_post_path(post) if admin_signed_in? %>
+	<%= link_to 'Delete Post', post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></div>
 
   </div>
 <% end %>

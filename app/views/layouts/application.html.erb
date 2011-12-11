@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Sarah Riggs, Information Scientist</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,7 +12,7 @@
   <div id="top">
 		<div id="topCenter">
 			<div class="title">
-  	 		<h1><a href="/">Sarah Riggs</a></h1>
+  	 		<h1><a href="http://sarahsblog.heroku.com">Sarah Riggs</a></h1>
 				<p class="subtitle">Information Scientist</p>
 			</div>
 			<div class="icons">
@@ -46,17 +46,17 @@
 
 			<div id="bottomMiddle">        
 				<% @recent_posts.each do |post| %>
-				<p><%= raw RedCloth.new(post.body.truncate(200)).to_html %><%= link_to ' Read More', post %></p>
+				<p><%= raw RedCloth.new(post.body.truncate(200)) %><%= link_to ' Read More', post %></p>
 				<% end %>
 			</div>
 
 			<div id="bottomRight">
 				<p>@Diceratops</p>
-				<p><a href="http://www.twitter.com/!/diceratops">Twitter</a></p>
-				<p><a href="">LinkedIn</a></p>
+				<p><a href="http://www.twitter.com/diceratops">Twitter</a></p>
+				<p><a href="http://www.linkedin.com/in/sarahriggs">LinkedIn</a></p>
 				<p><a href="http://www.github.com/diceratops">GitHub</a></p>
-				<p><a href="">Good Reads</a></p>
-				<p><a href="">Rdio</a></p>
+				<p><a href="http://www.goodreads.com/diceratops">Good Reads</a></p>
+				<p><a href="http://www.rdio.com/#/people/diceratops/">Rdio</a></p>
 			</div>
 
 	  </div>

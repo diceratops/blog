@@ -6,6 +6,11 @@
 
 </div>
 
+<div id="appbar">
+  <%= link_to 'Edit Post | ', edit_post_path(@post) if admin_signed_in? %>
+	<%= link_to 'Delete Post', @post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %>
+</div>
+
 <div class="comments">
 	<% @post.comments.each do |comment| %>
 		<div class="comment">
@@ -13,7 +18,7 @@
 			<p class="name"><%= comment.name %> says . . . </p>
 			<p class="body"><%= comment.body %></p>
 			<p class="date"><%= comment.created_at %></p>
-			<p class="destroy_comment"><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
+			<p class="destroy_comment"><%= link_to 'Delete Comment', comment, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
 		</div>
 	<% end %>
 </div>
@@ -53,5 +58,4 @@
 <% end %>
 </div>
 
-<%= link_to 'Edit | ', edit_post_path(@post) if admin_signed_in?  %>
-<p class="navback"><%= link_to 'Back', posts_path %></p>
+<p class="navback"><%= link_to 'Back to the Blog', posts_path %></p>
