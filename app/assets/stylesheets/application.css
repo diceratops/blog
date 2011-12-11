@@ -6,16 +6,74 @@
  *= require_tree . 
 */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-body {
-	background: #000;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body {	
 	font-family: "Helvetica";
-	color: #000;
+  background-color: #000;
+	line-height: 1.4;
 }
 
 h1 {
 	color: #fff;
 	font-size: 30px;
+}
+
+#top {
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#383838));
+   background-image: -webkit-linear-gradient(top, #000, #38a8a8);
+   background-image: -moz-linear-gradient(top, #000, #383838);
+   background-image: -ms-linear-gradient(top, #000, #383838);
+   background-image: -o-linear-gradient(top, #000, #383838);
+	 height: 120px;
 }
 
 h1 a {
@@ -26,12 +84,6 @@ h1 a:visited {
 	color: #cc9900;
 }
 
-#top {
-	background-color: #000;
-	color: #ffffff;
-	height: 120px;
-}
-
 #topCenter {
 	width:960px;
 	margin:0 auto;
@@ -39,26 +91,25 @@ h1 a:visited {
 }
 
 .title {
-	line-height: .4;
-	width: 175px;
-	padding-top: 50px;
+	line-height: 1.1;
+	padding-top: 65px;
 	float:left;
 }
 
-.title {
-	color:#fff;
-	padding-left:12px;
+.title .subtitle {
+	color: #fff;
+	padding-left:9px;
 }
 
 .icons {
-	padding-left:500px;
+	padding-left:580px;
 	color: #cc9900;
 	float:left;
-	padding-top:80px;
+	padding-top:90px;
 }
 
 #middle {
-	background-color: #fff;
+	background-color: #f8f8f8;
 	color: #000;	
 }
 
@@ -69,17 +120,7 @@ h1 a:visited {
 	padding:10px;
 }
 
-#slider{
-	width:750px;
-	height:200px;
-	background:#000;
-	color:#fff;
-	padding: 2px;
-	margin: 0 auto;
-}
-
 #bottom {
-	background-color:#000;
 }
 
 #bottomCenter {
@@ -105,8 +146,18 @@ h1 a:visited {
 	width:300px;
 	float:left;
 	padding: 10px;
-	background: url(circleOrange.png);
-	background-repeat: no-repeat;
+}
+
+.navback {
+	text-align: center;
+}
+
+.forward {
+	text-align: right;
+}
+
+.back {
+	text-align: left;
 }
 
 a {
@@ -122,22 +173,18 @@ a:hover {
 	color: #303030;
 }
 
-hr {
-	width:500px;
-	height:5px;
-	background:gray;
-}
-
 .date {
-	color:#a1a1a1;
+	color:#a0a0a0;
 	text-align: right;
 	font-size: 12px;
+	line-height: 4;
 }
 
 .dateComment {
 	color:#a1a1a1;
 	text-align: left;
 	font-size: 12px;
+	line-height: 4;
 }
 
 .right {
@@ -145,11 +192,16 @@ hr {
 }
 
 .posts h3 {
-	color: #000;
+	color: #cc6600;
+	font-size: 1.3em;
 }
 
-.body {
+.post_body {
 	color: #585858;
+}
+
+.post_body p{
+	text-indent: 20px;
 }
 
 .name {
@@ -157,8 +209,23 @@ hr {
 }
 
 .comments {
-	background-color: #f0f0f0;
-	padding: 10px;
+	padding-right: 50px;
+}
+
+.comment {
+	min-height:70px;
+	padding: 7px;
+}
+	
+.comment:nth-child(odd) {
+	background: #f0f0f0;
+}
+.comment:nth-child(even) {
+	background: #f8f8f8;
+}
+
+.destroy_comment {
+	text-align: right;
 }
 
 .nameImage {
@@ -168,12 +235,9 @@ hr {
 }
 
 .readmore {
-	padding-left: 800px;
-	line-height: .1
+	padding-left: 840px;
 }
 
 .notice {
 	color: #e0e0e0;
 }
-
-

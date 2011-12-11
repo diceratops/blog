@@ -13,15 +13,15 @@
 		<div id="topCenter">
 			<div class="title">
   	 		<h1><a href="/">Sarah Riggs</a></h1>
-				<p>Information Scientist</p>
+				<p class="subtitle">Information Scientist</p>
 			</div>
 			<div class="icons">
-				<p>test | test | test</p>
+				<p>portfolio | resume | about</p>
 			</div>
 				<p class="right"><%= link_to 'New Post', new_post_path if admin_signed_in? %></p>
 
  		 </div>
-	<div>
+	</div>
 
 
   <div id="middle">
@@ -31,7 +31,7 @@
 			<% end %>
 	   <%= yield %>
  	 	</div>
-	<div>
+	</div>
 
   <div id="bottom">
 		<div id="bottomCenter">
@@ -44,7 +44,7 @@
 				<p>This is another still</p>
 			</div>
 
-			<div id="bottomMiddle">
+			<div id="bottomMiddle">        
 				<% @recent_posts.each do |post| %>
 				<p><%= raw RedCloth.new(post.body.truncate(200)).to_html %><%= link_to ' Read More', post %></p>
 				<% end %>

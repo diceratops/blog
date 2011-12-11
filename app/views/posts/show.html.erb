@@ -1,20 +1,20 @@
 <div class="posts">
 
   <h3><%= @post.title %></h3>
-		<p class="date"><%= @post.created_at %></p>
-
-
-		<div class="body"><%= raw RedCloth.new(@post.body).to_html %></div>
-
+		<div class="post_body"><%= raw RedCloth.new(@post.body).to_html %></div>
+				<p class="date"><%= @post.created_at %></p>
 
 </div>
 
 <div class="comments">
 	<% @post.comments.each do |comment| %>
-		<div class="nameImage">[PICTURE]</div>
-		<p class="name"><%= comment.name %> says . . . </p>
-		<p class="body"><%= comment.body %></p>
-		<p class="dateComment"><%= comment.created_at %></p>
+		<div class="comment">
+			<div class="nameImage"><%= image_tag comment.gravatar_url %></div>
+			<p class="name"><%= comment.name %> says . . . </p>
+			<p class="body"><%= comment.body %></p>
+			<p class="date"><%= comment.created_at %></p>
+			<p class="destroy_comment"><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete if admin_signed_in? %></p>
+		</div>
 	<% end %>
 </div>
 
@@ -54,4 +54,4 @@
 </div>
 
 <%= link_to 'Edit | ', edit_post_path(@post) if admin_signed_in?  %>
-<%= link_to 'Back', posts_path %>
+<p class="navback"><%= link_to 'Back', posts_path %></p>
