@@ -2,7 +2,7 @@
 
   <h3><%= @post.title %></h3>
 		<div class="post_body"><%= raw RedCloth.new(@post.body).to_html %></div>
-				<p class="date"><%= @post.created_at %></p>
+				<p class="date">Posted on <%= @post.created_at %></p>
 
 </div>
 
