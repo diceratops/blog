@@ -44,17 +44,18 @@
 			<div id="bottomMiddle">   
 				<h2>Recent Posts</h2>     
 				<% @recent_posts.each do |post| %>
-				<p class="title_log"><%= raw RedCloth.new(post.title) %><%= link_to '...read more', post %></p>
+				<p class="roll"><%= raw RedCloth.new(post.title) %><%= link_to '...read more', post %></p>
 				<% end %>
 			</div>
 
 			<div id="bottomRight">
 				<h2>Find Me: @diceratops</h2>
+				<div class="roll">				
 				<p><a href="http://www.twitter.com/diceratops">Twitter</a></p>
 				<p><a href="http://www.linkedin.com/in/sarahriggs">LinkedIn</a></p>
 				<p><a href="http://www.github.com/diceratops">GitHub</a></p>
 				<p><a href="http://www.goodreads.com/diceratops">Good Reads</a></p>
-				<p><a href="http://www.rdio.com/#/people/diceratops/">Rdio</a></p>
+				<p><a href="http://www.rdio.com/#/people/diceratops/">Rdio</a></p></div>
 			</div>
 
 	  </div>
