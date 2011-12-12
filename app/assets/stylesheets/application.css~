@@ -181,14 +181,7 @@ a:hover {
 
 .date {
 	color:#a0a0a0;
-	text-align: date;
-	font-size: 12px;
-	line-height: 4;
-}
-
-.comment_date {
-	color:#a0a0a0;
-	text-align: right;
+	text-align: left;
 	font-size: 12px;
 	line-height: 4;
 }
