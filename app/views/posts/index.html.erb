@@ -8,7 +8,7 @@
     	<div class="post_body"><%= raw RedCloth.new(post.body.truncate(300)).to_html %> <%= link_to ' Read More', post if post.body.length > 300 %>
 
     	</div>
-		<div class="date"><%= post.created_at %></div>
+		<div class="date">Posted on <%= post.created_at %></div>
   </div>
 <% end %>
 
