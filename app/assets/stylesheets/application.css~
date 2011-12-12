@@ -181,7 +181,14 @@ a:hover {
 
 .date {
 	color:#a0a0a0;
-	text-align: left;
+	text-align: date;
+	font-size: 12px;
+	line-height: 4;
+}
+
+.comment_date {
+	color:#a0a0a0;
+	text-align: right;
 	font-size: 12px;
 	line-height: 4;
 }
@@ -226,12 +233,13 @@ a:hover {
 
 .comment_count {
 	text-align:center;
-  line-height: 64px;
-	background:url(/images/comments.png);
+  line-height: 28px;
+	background:url(/images/comment.png);
 	background-repeat: no-repeat;
 	float:right;
-	height: 64px;
-	width: 64px;
+	height: 32px;
+	width: 32px;
+	font-size: 10px;
 
 }
 

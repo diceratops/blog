@@ -69,7 +69,7 @@ h1 {
 
 #top {
    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#383838));
-   background-image: -webkit-linear-gradient(top, #000, #38a8a8);
+   background-image: -webkit-linear-gradient(top, #000, #383838);
    background-image: -moz-linear-gradient(top, #000, #383838);
    background-image: -ms-linear-gradient(top, #000, #383838);
    background-image: -o-linear-gradient(top, #000, #383838);
@@ -233,12 +233,13 @@ a:hover {
 
 .comment_count {
 	text-align:center;
-  line-height: 64px;
-	background:url(/images/comments.png);
+  line-height: 28px;
+	background:url(/images/comment.png);
 	background-repeat: no-repeat;
 	float:right;
-	height: 64px;
-	width: 64px;
+	height: 32px;
+	width: 32px;
+	font-size: 10px;
 
 }
 
