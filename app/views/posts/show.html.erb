@@ -11,6 +11,7 @@
 	<%= link_to 'Delete Post', @post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %>
 </div>
 
+<h2>Comments</h2>
 <div class="comments">
 	<% @post.comments.each do |comment| %>
 		<div class="comment">
