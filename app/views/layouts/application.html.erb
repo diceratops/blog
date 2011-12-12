@@ -37,16 +37,13 @@
 		<div id="bottomCenter">
 
  		  <div id="bottomLeft">
-				<p>Sarah Riggs, is an Information Scientists with a passion for making the user happy.</p>
-				<p>She's not afraid to get her hands dirty, and not just because she used to be an Archaeologist. She loves jumping into to new projects especially if it involves playing with code and learning something off the wall.</p>
-				<p>Sarah can often be found doodling, writing, and spending time outside.</p>
-				<p>This is another paragraph</p>
-				<p>This is another still</p>
+				<p>Sarah Riggs, is an Information Scientists with a passion for making the user happy. She's not afraid to get her hands dirty, and not just because she used to be an Archaeologist. She loves jumping into to new projects especially if it involves playing with code and learning something off the wall.</p>
+
 			</div>
 
 			<div id="bottomMiddle">        
 				<% @recent_posts.each do |post| %>
-				<p><%= raw RedCloth.new(post.body.truncate(200)) %><%= link_to ' Read More', post %></p>
+				<p><%= raw RedCloth.new(post.body.truncate(200)) %><%= link_to 'More', post %></p>
 				<% end %>
 			</div>
 

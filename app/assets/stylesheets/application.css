@@ -134,12 +134,14 @@ h1 a:visited {
 	width: 300px;
 	float:left;
 	padding: 10px;
+	text-indent:10px;
 }
 
 #bottomMiddle {
 	width:300px;
 	float:left;
 	padding: 10px;
+	text-indent: 10px;
 }
 
 #bottomRight {
@@ -224,6 +226,22 @@ a:hover {
 	background: #f8f8f8;
 }
 
+
+.comment_count {
+	text-align:center;
+  line-height:64px;
+	background:url(/images/comments.png);
+	background-repeat: no-repeat;
+	float:right;
+	height: 64px;
+	width: 64px;
+
+}
+
+.count {
+	padding-left: 800px; 
+}
+
 .destroy_comment {
 	text-align: right;
 }
@@ -232,10 +250,6 @@ a:hover {
 	float: left;
 	padding: 5px;
 	width: 100px;
-}
-
-.readmore {
-	padding-left: 840px;
 }
 
 .notice {
