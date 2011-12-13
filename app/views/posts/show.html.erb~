@@ -6,11 +6,17 @@
 
 </div>
 
+<p>
+  <h2>Tags:</h2>
+  <%= @post.references %>
+</p>
+
 <div id="appbar">
   <%= link_to 'Edit Post | ', edit_post_path(@post) if admin_signed_in? %>
 	<%= link_to 'Delete Post', @post, confirm: 'Are you sure?', method: :delete if admin_signed_in? %>
 </div>
 
+<h2>Comments</h2>
 <div class="comments">
 	<% @post.comments.each do |comment| %>
 		<div class="comment">
@@ -52,6 +58,7 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
