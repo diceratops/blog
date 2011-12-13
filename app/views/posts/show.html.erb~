@@ -8,7 +8,7 @@
 
 <p>
   <h2>Tags:</h2>
-  <%= @post.references %>
+  <% @post.references %>
 </p>
 
 <div id="appbar">

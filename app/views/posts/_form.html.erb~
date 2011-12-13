@@ -19,10 +19,12 @@
     <%= f.text_area :body %>
   </div>
 
-	<div class="field">
-    <%= f.label :tags %><br />
-    <%= f.text_field :tags %>
-  </div>
+<p>
+  <%= f.label :tag_names %><br />
+  <%= f.text_field :tag_names %>
+</p>
+
+
 
   <div class="actions">
 	
