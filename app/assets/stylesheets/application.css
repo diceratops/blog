@@ -231,6 +231,14 @@ a:hover {
 	background: #f8f8f8;
 }
 
+strong {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type:circle;
+}
+
 
 .comment_count {
 	text-align:center;

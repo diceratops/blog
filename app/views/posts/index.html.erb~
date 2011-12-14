@@ -14,7 +14,9 @@
 
 </div>
 
-<%= paginate @posts, :window => 3 %>
+<%= paginate @posts %>
+
+
 
 <br />
 
