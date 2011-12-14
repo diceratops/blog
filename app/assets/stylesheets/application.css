@@ -134,14 +134,12 @@ h1 a:visited {
 	width: 300px;
 	float:left;
 	padding: 10px;
-	text-indent:10px;
 }
 
 #bottomMiddle {
 	width:300px;
 	float:left;
 	padding: 10px;
-	text-indent: 10px;
 }
 
 #bottomRight {
@@ -204,10 +202,6 @@ a:hover {
 
 .post_body {
 	color: #585858;
-}
-
-.post_body p{
-	text-indent: 20px;
 }
 
 .name {
