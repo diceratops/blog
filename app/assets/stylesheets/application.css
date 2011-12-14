@@ -231,7 +231,7 @@ strong {
 
 ul {
 	list-style-type:circle;
-	text-indent: 10px;
+	padding-left: 10px;
 }
 
 
