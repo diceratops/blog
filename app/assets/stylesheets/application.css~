@@ -204,10 +204,6 @@ a:hover {
 	color: #585858;
 }
 
-.post_body p{
-	text-indent: 20px;
-}
-
 .name {
 	font-weight: bold;
 }
