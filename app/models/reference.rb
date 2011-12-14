@@ -1,4 +1,4 @@
 class Reference < ActiveRecord::Base
-	belongs_to :tags
-	belongs_to :posts
+	belongs_to :tag
+	belongs_to :post
 end

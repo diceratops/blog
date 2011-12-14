@@ -8,7 +8,9 @@
 
 <p>
   <h2>Tags:</h2>
-  <% @post.references %>
+  <% @post.tags.each do |tag| %>
+    <%= tag.name + ', ' %>
+  <% end %>
 </p>
 
 <div id="appbar">

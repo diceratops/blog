@@ -6,10 +6,10 @@
 
 </div>
 
-
+<p>
   <h2>Tags:</h2>
-	<p>This is where tags should go</p>
-
+  <%= @post.tag_names %>
+</p>
 
 <div id="appbar">
   <%= link_to 'Edit Post | ', edit_post_path(@post) if admin_signed_in? %>
