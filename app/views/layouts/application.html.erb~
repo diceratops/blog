@@ -45,7 +45,7 @@
 			<div id="bottomMiddle">   
 				<h2>Recent Posts</h2>     
 				<% @recent_posts.each do |post| %>
-				<p class="roll"><%= raw RedCloth.new(post.title) %><%= link_to (post.title), post %></p>
+				<p class="roll"><%= link_to (post.title), post %></p>
 				<% end %>
 			</div>
 

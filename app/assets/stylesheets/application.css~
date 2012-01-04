@@ -84,6 +84,10 @@ h1 a:visited {
 	color: #cc9900;
 }
 
+h1 a:hover {
+	color: #cc9922;
+}
+
 #topCenter {
 	width:960px;
 	margin:0 auto;
@@ -204,6 +208,10 @@ a:hover {
 	color: #585858;
 }
 
+.post_body p {
+	line-height: 2em;
+}
+
 .name {
 	font-weight: bold;
 }
@@ -231,7 +239,7 @@ strong {
 
 ul {
 	list-style-type:circle;
-	text-indent: 10px;
+	padding-left: 10px;
 }
 
 
