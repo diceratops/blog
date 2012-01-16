@@ -4,111 +4,160 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree . 
-*/
+*//* RESET */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, em, img,
-small, strike, strong, b, u, i, center,
-dl, dt, dd, ol, ul, li, {
+html, body, div, span, object,
+h1, h2, h3, h4, h5, h6, p,
+a, code, em, img, q, s,
+small, strong, ol, ul, li, menu, nav {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
+	}
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
+	}
+/* CONTENT */
+body {
+	line-height: 1.3;
+	font-family : calibri, verdana, san-serif;
+	background: #fff5fe;
+	color: #444444;
+	}
 
 ol, ul {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+	}
 
-body {	
-	font-family: "calibri";
-	line-height: 1.4;
-	color: #3d3d3d;
-}
+a {
+	text-decoration: none;
+	color: #c165af;
+	}
+	
+a:hover {
+	text-decoration: underline;
+	}
+	
+h1 {
+	font-size: 2em;
+	color: #d4229a;
+	}
+	
+h2  {
+	font-size: 2em;
+	color: #d4229a;
+	}
+	
 
-
-#top {
-	height: 70px;
-	background-color: #000;
-}
-
-#center {
-	width:960px;
-	margin:0 auto;
-	margin-top: 70px;
-	height: 200px;
-}
-
-#ribbon {
-	background-image: url('images/header.png') repeat;
-}
-
-
-#middle {
-	background-color: #ffe2f6;
-}
-
-#middleCenter {
-	width:940px;
-	margin:0 auto;
-	min-height:300px;
-	padding:10px;
-}
-
-#bottom {
-}
-
-#bottomCenter {
-	width:960px;
-	margin:0 auto;
-	padding: 0px;
-	color:#fff;
-}
-
-#bottomLeft{
-	width: 300px;
-	float:left;
-	padding: 10px;
-}
-
-#bottomMiddle {
-	width:300px;
-	float:left;
-	padding: 10px;
-}
-
-#bottomRight {
-	width:300px;
-	float:left;
-	padding: 10px;
-}
-
-h2 {
+h3 {
 	font-size: 1.5em;
-	color: #a0a0a0;
+	color: #d4229a
+	}
+	
+strong {
+	font-weight: bold;
 }
+	
+#headerMiddle  {
+	width: 960px;
+	margin: 0 auto;
+	}
+
+#title {
+	float: left;
+	margin-top: 20px;
+	}
+
+#navigation {
+	float: right;
+	margin-top: 61px;
+	padding-right: 20px;
+	}
+	
+#navigation ul li{
+	background-color: #fff5fe;
+	display: inline;
+	margin: .5em;
+	padding-top: 19px;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-box-shadow:    2px -2px 1px 1px #a50062;
+	-webkit-box-shadow: 2px -2px 1px 1px #a50062;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;d
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+
+	#navigation ul li a:hover {
+	background-color: #000;
+	padding-top: 19px;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	}
+	
+	
+#top {
+	background-color: #000;
+	height: 50px;
+
+	}
+	
+#header {
+	background-image:url('../images/header.png');
+	background-repeat: repeat;
+	height: 100px;
+	width: 100%;
+	}
+	
+#centerMiddle {
+	margin: 0 auto;
+	width: 960px;
+	}
+
+	#centerLeft {
+	width: 760px;
+	float: left;
+	padding-right: 20px;
+	}
+		
+		#centerLeft p {
+		margin-top: 10px;
+		}
+	
+	#centerRight {
+	width: 180px;
+	float: right;
+	}
+	
+.social ul li {
+	margin-left: 100px;
+	padding: 10px;
+  list-style-type:none;
+	}
+	
+/*****************************************************/
+
 .navback {
 	text-align: center;
+	padding-bottom: 50px;
 }
 
 .forward {
@@ -119,24 +168,16 @@ h2 {
 	text-align: left;
 }
 
-a {
-	color: #cc9900;
-	text-decoration:none;
-}
-
-a:visited {
-	color: #cc5500;
-}
-
-a:hover {
-	color: #303030;
-}
-
 .date {
 	color:#a0a0a0;
 	text-align: date;
 	font-size: 12px;
 	line-height: 4;
+}
+
+ul {
+	list-style-type:circle;
+	padding-left: 10px;
 }
 
 .comment_date {
@@ -148,19 +189,21 @@ a:hover {
 
 .right {
 	text-align: right;
+	margin-right: 200px;
+	padding-top: 20px;
 }
 
 .posts h3 {
-	color: #cc6600;
+	color: #000;
 	font-size: 1.3em;
 }
 
 .post_body {
-	color: #585858;
+	color: #444;
 }
 
 .post_body p {
-	line-height: 1.5em;
+	line-height: 1.3em;
 }
 
 .name {
@@ -184,16 +227,6 @@ a:hover {
 	background: #f8f8f8;
 }
 
-strong {
-	font-weight: bold;
-}
-
-ul {
-	list-style-type:circle;
-	padding-left: 10px;
-}
-
-
 .comment_count {
 	text-align:center;
   line-height: 28px;
@@ -203,7 +236,6 @@ ul {
 	height: 32px;
 	width: 32px;
 	font-size: 10px;
-
 }
 
 .count {

@@ -9,24 +9,41 @@
 <body>
 
 
-  <div id="top"></div>
+  <div id="top">
+  	<p class="right"><%= link_to 'New Post', new_post_path if admin_signed_in? %></p>
+  </div>
 	
-	<div id="ribbon">
-	
-		 <div id="center"><img src="images/sarahriggs.png">
-	
-				<p class="right"><%= link_to 'New Post', new_post_path if admin_signed_in? %></p>
-
- 	   </div>
+	<div id="header">
+		<div id="headerMiddle">
+			<div id="title">
+				<a href="/."><img src="/images/sarahriggs.png" alt="sarah riggs"></a>
+			</div>
+			<div id="navigation">
+				<ul>
+					<li><a href="#"><img src="/images/blog.png" alt="blog"></a></li>
+					<li><img src="/images/portfolio.png" alt="portfolio"></li>
+				</ul> 	  	
+			</div>
 	</div>
 
-
-  <div id="middle">
-		<div id="middleCenter">
-			<% flash.each do |key, msg| %>
- 			 <%= content_tag :div, msg, :id => key %>
-			<% end %>
-	   <%= yield %>
+  <div id="center">
+		<div id="centerMiddle">
+			<div id="centerLeft">
+				<% flash.each do |key, msg| %>
+					<%= content_tag :div, msg, :id => key %>
+					<% end %>
+				<%= yield %>
+			</div>
+			<div id="centerRight">
+				<div class="social">
+					<ul>
+						<li><a href="http://www.twitter.com/#/diceratops"><img src="/images/twitter.png" alt="twitter"></a></li>
+						<li><a href="http://www.github.com/diceratops"><img src="/images/gh.png" alt="github"></a></li>
+						<li><a href="http://www.linkedin.com/in/sarahriggs"><img src="/images/in.png" alt="linkedin"></a></li>
+						<li><a href="http://profiles.google.com/diceratops"><img src="/images/google.png" alt="google"></a></li>
+					</ul>
+				</div>
+			</div>
  	 	</div>
 	</div>
 

@@ -2,7 +2,7 @@
 
 
 <% @posts.each do |post| %>
-  <div class="post">
+  <div class="post"><p>TEST</p>
     <h3><%= link_to post.title, post %></h3>
 		<p class="comment_count"><%= post.comments.count %></p>
     	<div class="post_body"><%= raw RedCloth.new(post.body.truncate(300)).to_html %> <%= link_to ' Read More', post if post.body.length > 300 %>
